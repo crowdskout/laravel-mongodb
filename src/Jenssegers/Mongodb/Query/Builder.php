@@ -212,10 +212,10 @@ class Builder extends QueryBuilder {
             if ($this->projections) $pipeline[] = array('$project' => $this->projections);
 
             // Execute aggregation
-            $results = $this->collection->aggregate($pipeline);
+            $results = $this->collection->aggregate($pipeline, ['cursor' => new \stdClass()]);
 
             // Return results
-            return $results['result'];
+            return $results['cursor'];
         }
 
         // Distinct query
