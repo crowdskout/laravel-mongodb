@@ -6,4 +6,3 @@ composer.lock
 *.sublime-project
 *.sublime-workspace
 *.project
-/.idea
